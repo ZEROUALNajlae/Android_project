@@ -257,22 +257,22 @@ public class MenuListActivity extends AppCompatActivity implements MenuAdapter.O
 			Menu menu2 = new Menu("ze","najlae","najlae",imageInByte, 3 , "jewellery");
 			db.insertMenu(menu2);*/
 
-			Organisateur org = new Organisateur("ze","najlae","najlae",1,"hello","makes","teste",imageInByte, 5);
+			Organisateur org = new Organisateur("ze","najlae","najlae","1","hello","makes","teste",imageInByte, 5);
 			db.insertOrganisateur(org);
 
-			Organisateur org1 = new Organisateur("ze","najlae","najlae",1,"hello","makes","teste",imageInByte, 5);
+			Organisateur org1 = new Organisateur("ze","najlae","najlae","1","hello","makes","teste",imageInByte, 5);
 
 			db.insertOrganisateur(org1);
 
-			Organisateur org2 = new Organisateur("ze","najlae","najlae",1,"hello","makes","teste",imageInByte, 5);
+			Organisateur org2 = new Organisateur("ze","najlae","najlae","1","hello","makes","teste",imageInByte, 5);
 
 			db.insertOrganisateur(org2);
 
-			Organisateur org3 = new Organisateur("ze","najlae","najlae",1,"hello","makes","teste",imageInByte, 5);
+			Organisateur org3 = new Organisateur("ze","najlae","najlae","1","hello","makes","teste",imageInByte, 5);
 
 			db.insertOrganisateur(org3);
 
-			Organisateur org4 = new Organisateur("ze","najlae","najlae",1,"hello","makes","teste",imageInByte, 5);
+			Organisateur org4 = new Organisateur("ze","najlae","najlae","1","hello","makes","teste",imageInByte, 5);
 
 			db.insertOrganisateur(org4);
 

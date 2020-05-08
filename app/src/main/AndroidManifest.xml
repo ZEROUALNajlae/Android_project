@@ -13,6 +13,12 @@
         <activity android:name=".Explore" />
         <activity android:name=".Graduation" />
         <activity android:name=".ProfilOrg" />
+        <activity android:name=".ForgetPasswordC" />
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".organisateur" />
+        <activity android:name=".register" />
+
         <activity
             android:name=".AccueilClient"
             android:theme="@style/AppTheme.NoActionBar" />

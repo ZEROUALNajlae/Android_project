@@ -32,7 +32,7 @@ public class Welcome extends AppCompatActivity {
 
         btnsub.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(Welcome.this, Home.class);
+                Intent i = new Intent(Welcome.this, MainActivity.class);
                 startActivity(i);            }
         });
 

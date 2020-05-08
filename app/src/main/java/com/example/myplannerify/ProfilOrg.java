@@ -62,7 +62,7 @@ public class ProfilOrg extends AppCompatActivity {
 		org = MenuListActivity.db.getOrganisateur(id);
 		nom.setText(org.getNom_organisateur());
 		email.setText(org.getEmail_organisateur());
-		mNumber.setText(Integer.toString(org.getContact_organisateur()));
+		mNumber.setText(org.getContact_organisateur());
 		description.setText(org.getDescription_organisateur());
 		adresse.setText(org.getAdresse_organisateur());
 		ByteArrayInputStream imageStream = new ByteArrayInputStream(org.getImage_organisateur());
