@@ -18,6 +18,7 @@ tools:context=".MenuListActivity">
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/shr_menu"
         app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
 </com.google.android.material.appbar.AppBarLayout>
@@ -29,5 +30,17 @@ tools:context=".MenuListActivity">
     android:layout_height="match_parent"
     android:scrollbars="vertical"
     android:layout_marginTop="?actionBarSize"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        app:menu="@menu/bottom_navigation_menu"
+        app:elevation="10dp"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/bottomNavigationBackground"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

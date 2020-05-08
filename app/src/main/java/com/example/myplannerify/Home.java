@@ -58,13 +58,14 @@ public class Home extends AppCompatActivity {
 
                         return true;
                     case R.id.navigation_explore:
-                        //https://dribbble.com/shots/6482664-Design-Course-App-UI
                         Intent intentGetStarted = new Intent(Home.this, Explore.class);
                         startActivity(intentGetStarted);
                         return true;
                     case R.id.navigation_chat:
                         return true;
                     case R.id.navigation_profil:
+                        Intent intentGetStarted1 = new Intent(Home.this, ProfilClient.class);
+                        startActivity(intentGetStarted1);
                         return true;
 
                 }

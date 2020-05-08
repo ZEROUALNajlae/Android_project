@@ -96,10 +96,10 @@
 						style="@style/viewParent.headerText.HomeCardTitle"
 						android:text="Catering" />
 
-					<TextView
-						style="@style/viewParent.headerText.homeCardContent"
-						android:layout_below="@id/textViewSub2Title"
-						android:text="When I sayed I do,\nI didn't mean laundry" />
+                    <TextView
+                        style="@style/viewParent.headerText.homeCardContent"
+                        android:layout_below="@id/textViewSub2Title"
+                        android:text="Checkout the best offers\n of meals and buffets" />
 
 					<ImageView
 						style="@style/homeCardImage"
@@ -137,7 +137,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub3Title"
-                        android:text="What happens at my birthday party,\nstays at my birthday party" />
+                        android:text="Checkout  the best pastry and \nsweet dishes" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -177,7 +177,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub4Title"
-                        android:text="Graduation is not the end,\nit's the beginning" />
+                        android:text="Checkout the best jewellery pieces \nexclusively for your loved one" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -214,7 +214,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
+                        android:text="Checkout  the best music bands\n to keep your guests entertained" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -253,7 +253,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
+                        android:text="Checkout the best photographers\n to perpetuate your memories" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -292,7 +292,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
+                        android:text="Check out the best beauty salons\n to look your best in your special day" />
 
                     <ImageView
                         style="@style/homeCardImage"

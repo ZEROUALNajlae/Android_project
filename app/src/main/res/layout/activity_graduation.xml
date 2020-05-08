@@ -52,13 +52,13 @@
                         android:layout_width="133dp"
                         android:layout_height="wrap_content"
                         android:maxHeight="90dp"
-                        android:src="@drawable/dress1"
+                        android:src="@drawable/catering"
                         tools:srcCompat="@drawable/catering" />
 
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub1Title"
-                        android:text="A wedding is for a say, but \na marriage is for a lifetime" />
+                        android:text="Checkout the best offers\n of meals and buffets" />
 
                     <TextView
                         android:id="@+id/textViewSub1Title"
@@ -109,7 +109,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub3Title"
-                        android:text="What happens at my birthday party,\nstays at my birthday party" />
+                        android:text="Checkout  the best pastry and \nsweet dishes" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -121,25 +121,6 @@
 
                 </net.colindodd.gradientlayout.GradientRelativeLayout>
             </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:cardPreventCornerOverlap="true"
-                android:layout_marginTop="10dp"
-                android:clickable="true"
-                android:id="@+id/jewellery"/>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:cardPreventCornerOverlap="true"
-                android:layout_marginTop="10dp"
-                android:clickable="true"
-                android:id="@+id/music"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -160,25 +141,25 @@
                     android:padding="10dp">
 
                     <TextView
-                        android:id="@+id/textViewSub5Title2"
+                        android:id="@+id/textViewSub4Title"
                         style="@style/viewParent.headerText.HomeCardTitle"
                         android:text="Photography" />
 
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
-                        android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
+                        android:layout_below="@id/textViewSub4Title"
+                        android:text="Checkout the best photographers\n to perpetuate your memories" />
 
                     <ImageView
                         style="@style/homeCardImage"
-                        android:layout_width="98dp"
-                        android:layout_height="71dp"
                         android:maxHeight="90dp"
                         android:src="@drawable/photography1"
                         tools:srcCompat="@drawable/photography1" />
 
                 </net.colindodd.gradientlayout.GradientRelativeLayout>
             </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -206,7 +187,7 @@
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
                         android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
+                        android:text="Check out the best beauty salons\n to look your best in your special day" />
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -216,6 +197,8 @@
 
                 </net.colindodd.gradientlayout.GradientRelativeLayout>
             </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

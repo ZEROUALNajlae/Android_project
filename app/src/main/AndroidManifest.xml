@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Explore"></activity>
+        <activity android:name=".ProfilClient"></activity>
+        <activity android:name=".Explore" />
         <activity android:name=".Graduation" />
         <activity android:name=".ProfilOrg" />
         <activity
@@ -20,7 +21,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MenuListActivity"
-            android:label="Beneficiary Details"
             android:parentActivityName=".AddMenuActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar">
