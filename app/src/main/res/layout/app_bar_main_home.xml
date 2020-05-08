@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccueilClient">
+    tools:context=".Home">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/activity_accueil_client" />
+    <include layout="@layout/activity_home" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
@@ -33,7 +33,6 @@
         app:menu="@menu/bottom_navigation_menu"
         app:elevation="10dp"
         app:labelVisibilityMode="labeled"
-        app:itemBackground="@color/bottomNavigationBackground"
-        />
+        app:itemBackground="@color/bottomNavigationBackground"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

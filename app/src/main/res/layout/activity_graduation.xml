@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:gl="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".AccueilClient"
-    tools:showIn="@layout/app_bar_main"
+    tools:context=".Graduation"
+    tools:showIn="@layout/app_bar_main_graduation"
     style="@style/parent.contentLayout">
 
     <androidx.core.widget.NestedScrollView
@@ -53,7 +53,7 @@
                         android:layout_height="wrap_content"
                         android:maxHeight="90dp"
                         android:src="@drawable/dress1"
-                        tools:srcCompat="@drawable/dress1" />
+                        tools:srcCompat="@drawable/catering" />
 
                     <TextView
                         style="@style/viewParent.headerText.homeCardContent"
@@ -63,7 +63,7 @@
                     <TextView
                         android:id="@+id/textViewSub1Title"
                         style="@style/viewParent.headerText.HomeCardTitle"
-                        android:text="Wedding Dresses" />
+                        android:text="Catering" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -78,37 +78,9 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
-				android:clickable="true"
-				android:id="@+id/catering"
-                android:layout_marginTop="10dp">
-
-				<net.colindodd.gradientlayout.GradientRelativeLayout
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:minHeight="100dp"
-					android:padding="10dp"
-					gl:end_color="@color/gradientOrange"
-					gl:orientation="LEFT_RIGHT"
-					gl:start_color="@color/gradientLightYellow">
-
-					<TextView
-						android:id="@+id/textViewSub2Title"
-						style="@style/viewParent.headerText.HomeCardTitle"
-						android:text="Catering" />
-
-					<TextView
-						style="@style/viewParent.headerText.homeCardContent"
-						android:layout_below="@id/textViewSub2Title"
-						android:text="When I sayed I do,\nI didn't mean laundry" />
-
-					<ImageView
-						style="@style/homeCardImage"
-						android:maxHeight="90dp"
-						android:src="@drawable/catering"
-						tools:srcCompat="@drawable/catering" />
-
-				</net.colindodd.gradientlayout.GradientRelativeLayout>
-			</androidx.cardview.widget.CardView>
+                android:clickable="true"
+                android:id="@+id/catering"
+                android:layout_marginTop="10dp"/>
 
 
             <androidx.cardview.widget.CardView
@@ -116,8 +88,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
-				android:clickable="true"
-				android:id="@+id/pastry"
+                android:clickable="true"
+                android:id="@+id/pastry"
                 android:layout_marginTop="10dp">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
@@ -157,36 +129,8 @@
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
                 android:layout_marginTop="10dp"
-				android:clickable="true"
-				android:id="@+id/jewellery">
-
-                <net.colindodd.gradientlayout.GradientRelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    gl:start_color="@color/gradientLightOrange2"
-                    gl:end_color="@color/gradientOrange3"
-                    gl:orientation="LEFT_RIGHT"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/textViewSub4Title"
-                        style="@style/viewParent.headerText.HomeCardTitle"
-                        android:text="Jewellery" />
-
-                    <TextView
-                        style="@style/viewParent.headerText.homeCardContent"
-                        android:layout_below="@id/textViewSub4Title"
-                        android:text="Graduation is not the end,\nit's the beginning" />
-
-                    <ImageView
-                        style="@style/homeCardImage"
-                        android:maxHeight="90dp"
-                        android:src="@drawable/jewellery"
-                        tools:srcCompat="@drawable/jewellery" />
-
-                </net.colindodd.gradientlayout.GradientRelativeLayout>
-            </androidx.cardview.widget.CardView>
+                android:clickable="true"
+                android:id="@+id/jewellery"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -194,38 +138,8 @@
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
                 android:layout_marginTop="10dp"
-				android:clickable="true"
-				android:id="@+id/music">
-
-                <net.colindodd.gradientlayout.GradientRelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    gl:start_color="@color/gradientViolet"
-                    gl:end_color="@color/gradientLightBlue"
-                    gl:orientation="LEFT_RIGHT"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/textViewSub5Title1"
-                        style="@style/viewParent.headerText.HomeCardTitle"
-                        android:text="Music" />
-
-                    <TextView
-                        style="@style/viewParent.headerText.homeCardContent"
-                        android:layout_below="@id/textViewSub5Title"
-                        android:text="Custumize your party with Plannerify" />
-
-                    <ImageView
-                        style="@style/homeCardImage"
-                        android:layout_width="98dp"
-                        android:layout_height="71dp"
-                        android:maxHeight="90dp"
-                        android:src="@drawable/music"
-                        tools:srcCompat="@drawable/music" />
-
-                </net.colindodd.gradientlayout.GradientRelativeLayout>
-            </androidx.cardview.widget.CardView>
+                android:clickable="true"
+                android:id="@+id/music"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -233,8 +147,8 @@
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
                 android:layout_marginTop="10dp"
-				android:clickable="true"
-				android:id="@+id/photography">
+                android:clickable="true"
+                android:id="@+id/photography">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
                     android:layout_width="match_parent"
@@ -272,8 +186,8 @@
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
                 android:layout_marginTop="10dp"
-				android:clickable="true"
-				android:id="@+id/beauty">
+                android:clickable="true"
+                android:id="@+id/beauty">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
                     android:layout_width="match_parent"

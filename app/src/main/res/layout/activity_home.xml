@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2020. rogergcc
-  -->
+<?xml version="1.0" encoding="utf-8"?>
 
 <androidx.core.widget.NestedScrollView
 
@@ -9,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    tools:showIn="@layout/app_bar_main_home"
     android:background="#DCABF1">
 
 
@@ -223,6 +221,7 @@
             <androidx.cardview.widget.CardView
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:id="@+id/bankcardId2"
                 android:layout_width="160dp"
                 android:layout_height="190dp"
                 android:layout_margin="10dp">

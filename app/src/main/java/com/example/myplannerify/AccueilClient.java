@@ -20,7 +20,7 @@ public class AccueilClient extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil_client);
+        setContentView(R.layout.app_bar_main);
         ll = (RelativeLayout) findViewById(R.id.ll);
         dress = (CardView) findViewById(R.id.bankcardId);
         catering = (CardView) findViewById(R.id.catering);
