@@ -42,7 +42,7 @@ public class MySQLite extends SQLiteOpenHelper {
 
 
 
-	final static String CREATE_TABLE_ORGANISATEUR = "CREATE TABLE "+Organisateur.getTableName()+"("+Organisateur.getColId()+" integer primary key autoincrement , "+Organisateur.getColNom()+" text ,"+Organisateur.getColEmail() +" text,"+Organisateur.getColPasswd()+" text ,"+ Organisateur.getColVille()+" text ,"+ Organisateur.getColAdresse()+" text ,"+ Organisateur.getColDesc()+" text ,"+Organisateur.getColImage()+" blob  ," +Organisateur.getColContact()+" integer," +Organisateur.getColLikes() +" integer );";
+	final static String CREATE_TABLE_ORGANISATEUR = "CREATE TABLE "+Organisateur.getTableName()+"("+Organisateur.getColId()+" integer primary key autoincrement , "+Organisateur.getColNom()+" text ,"+Organisateur.getColEmail() +" text,"+Organisateur.getColPasswd()+" text ,"+ Organisateur.getColVille()+" text ,"+ Organisateur.getColAdresse()+" text ,"+ Organisateur.getColDesc()+" text ,"+Organisateur.getColImage()+" blob  ," +Organisateur.getColContact()+" text," +Organisateur.getColLikes() +" integer );";
 
 
 
@@ -59,7 +59,7 @@ public class MySQLite extends SQLiteOpenHelper {
 		return dbw.insert(Organisateur.getTableName(), null, contentValues);
 	}
 
-	public int updateOrganisateur(Organisateur organisateur ,String nom,  String email , String password, int contact , String ville, String description, String adresse, byte[] image  ){
+	public int updateOrganisateur(Organisateur organisateur ,String nom,  String email , String password, String contact , String ville, String description, String adresse, byte[] image  ){
 		organisateur.setNom_organisateur(nom);
 		organisateur.setEmail_organisateur(email);
 		organisateur.setPasswd_organisateur(password);
@@ -97,7 +97,7 @@ public class MySQLite extends SQLiteOpenHelper {
 			organisateur.setNom_organisateur(c.getString(c.getColumnIndex(Organisateur.getColNom())));
 			organisateur.setEmail_organisateur(c.getString(c.getColumnIndex(Organisateur.getColEmail())));
 			organisateur.setPasswd_organisateur(c.getString(c.getColumnIndex(Organisateur.getColPasswd())));
-			organisateur.setContact_organisateur(c.getInt(c.getColumnIndex(Organisateur.getColContact())));
+			organisateur.setContact_organisateur(c.getString(c.getColumnIndex(Organisateur.getColContact())));
 			organisateur.setVille_organisateur(c.getString(c.getColumnIndex(Organisateur.getColVille())));
 			organisateur.setDescription_organisateur(c.getString(c.getColumnIndex(Organisateur.getColDesc())));
 			organisateur.setAdresse_organisateur(c.getString(c.getColumnIndex(Organisateur.getColAdresse())));
@@ -113,12 +113,12 @@ public class MySQLite extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor c = dbr.rawQuery("select * from " + Organisateur.getTableName() + ";", null);
 		while(c.moveToNext()) {
-			Organisateur organisateur = new Organisateur("","","",0,"","","",null, 0);
+			Organisateur organisateur = new Organisateur("","","","0","","","",null, 0);
 			organisateur.setId_organisateur(c.getInt(c.getColumnIndex(Organisateur.getColId())));
 			organisateur.setNom_organisateur(c.getString(c.getColumnIndex(Organisateur.getColNom())));
 			organisateur.setEmail_organisateur(c.getString(c.getColumnIndex(Organisateur.getColEmail())));
 			organisateur.setPasswd_organisateur(c.getString(c.getColumnIndex(Organisateur.getColPasswd())));
-			organisateur.setContact_organisateur(c.getInt(c.getColumnIndex(Organisateur.getColContact())));
+			organisateur.setContact_organisateur(c.getString(c.getColumnIndex(Organisateur.getColContact())));
 			organisateur.setVille_organisateur(c.getString(c.getColumnIndex(Organisateur.getColVille())));
 			organisateur.setDescription_organisateur(c.getString(c.getColumnIndex(Organisateur.getColDesc())));
 			organisateur.setAdresse_organisateur(c.getString(c.getColumnIndex(Organisateur.getColAdresse())));
@@ -177,6 +177,59 @@ public class MySQLite extends SQLiteOpenHelper {
 		dbw.update(Organisateur.getTableName(), contentValues, where, whereArgs);
 
 	}
+	public boolean insertO( Organisateur organisateur ){
+
+		contentValues.put(Organisateur.getColNom(), organisateur.getNom_organisateur());
+		contentValues.put(Organisateur.getColEmail(), organisateur.getEmail_organisateur());
+		contentValues.put(Organisateur.getColPasswd(), organisateur.getPasswd_organisateur());
+		contentValues.put(Organisateur.getColContact(), organisateur.getContact_organisateur());
+		contentValues.put(Organisateur.getColVille(), organisateur.getVille_organisateur());
+		contentValues.put(Organisateur.getColDesc(), organisateur.getDescription_organisateur());
+		contentValues.put(Organisateur.getColAdresse(), organisateur.getAdresse_organisateur());
+		contentValues.put(Organisateur.getColImage(), organisateur.getImage_organisateur());
+		long ins = dbw.insert(Organisateur.getTableName() , null , contentValues);
+		if(ins==-1)return false;
+		else return true;
+	}
+
+	public Boolean chkemailO(String Email_Organisateur){
+		int i=0;
+		//SQLiteDatabase db=  this.getReadableDatabase();
+		Cursor cursorO = dbr.rawQuery("select * from "+Organisateur.getTableName()+" where "+Organisateur.getColEmail()+"=?", new String[]{Email_Organisateur});
+		if(cursorO.getCount()>0)i=1;
+		Cursor cursorC = dbr.rawQuery("select * from "+Client.getTableName()+" where "+Organisateur.getColEmail()+"=?", new String[]{Email_Organisateur});
+		if(cursorC.getCount()>0)i=1;
+		if(i==1) return true;
+		else return false;
+	}
+
+	public Boolean empssO(String Email_Organisateur , String Password_Organisateur ) {
+		//SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = dbr.rawQuery("select * from "+ Organisateur.getTableName()+" where "+Organisateur.getColEmail()+"=? and "+Organisateur.getColPasswd()+" = ?", new String[]{Email_Organisateur, Password_Organisateur});
+		if (cursor.getCount() > 0) return true;
+		else return false;
+	}
+
+	public void updatC(String Password_Client , String Email_Client) {
+		contentValues.put(Client.getColPasswd() , Password_Client );
+
+		String where = ""+Client.getColEmail()+"= ?";
+		dbw.update(Client.getTableName(), contentValues, where ,new String[]{Email_Client});
+		dbw.close();
+	}
+	public void  updatO(String userEmail,String password)
+	{
+		//  create object of ContentValues
+		//ContentValues updatedValues = new ContentValues();
+		// Assign values for each Column.
+		//contentValues.put( Organisateur.getColEmail(), userEmail);
+		contentValues.put(Organisateur.getColPasswd(), password);
+
+		String where = ""+Organisateur.getColEmail()+"= ?";
+		dbw.update(Organisateur.getTableName(),contentValues, where, new String[]{userEmail});
+
+	}
+
 
 
 
@@ -359,6 +412,23 @@ public class MySQLite extends SQLiteOpenHelper {
 		c.close();
 
 		return data;
+	}
+	public boolean insertC(Client client){
+		//SQLiteDatabase db = this.getWritableDatabase();
+		contentValues.put(Client.getColNom(), client.getNom_client());
+		contentValues.put(Client.getColPrenom(), client.getPrenom_client());
+		contentValues.put(Client.getColEmail(), client.getEmail_client());
+		contentValues.put(Client.getColPasswd(), client.getPasswd_client());
+		contentValues.put(Client.getColVille(), client.getVille_client());
+		long ins = dbw.insert(Client.getTableName() , null , contentValues);
+		if(ins==-1)return false;
+		else return true;
+	}
+	public Boolean empssC(String Email_Client , String Password_Client ) {
+		//SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = dbr.rawQuery("select * from "+ Client.getTableName()+" where "+Client.getColEmail()+"=? and "+Client.getColPasswd()+" = ?", new String[]{Email_Client, Password_Client});
+		if (cursor.getCount() > 0) return true;
+		else return false;
 	}
 
 

@@ -11,7 +11,7 @@ public class Organisateur {
 	private String nom_organisateur;
 	private String email_organisateur;
 	private String passwd_organisateur;
-	private int contact_organisateur;
+	private String contact_organisateur;
 	private String ville_organisateur;
 	private String description_organisateur;
 	private String adresse_organisateur;
@@ -33,7 +33,7 @@ public class Organisateur {
 
 	public Organisateur(){  }
 
-	public Organisateur(String nom, String email, String passwd, int contact, String ville, String description, String adresse, byte[] image , int likes) {
+	public Organisateur(String nom, String email, String passwd, String contact, String ville, String description, String adresse, byte[] image , int likes) {
 		this.nom_organisateur = nom;
 		this.email_organisateur = email;
 		this.passwd_organisateur = passwd;
@@ -61,7 +61,7 @@ public class Organisateur {
 		return passwd_organisateur;
 	}
 
-	public int getContact_organisateur() {
+	public String getContact_organisateur() {
 		return contact_organisateur;
 	}
 
@@ -101,7 +101,7 @@ public class Organisateur {
 		this.passwd_organisateur = passwd_organisateur;
 	}
 
-	public void setContact_organisateur(int contact_organisateur) {
+	public void setContact_organisateur(String contact_organisateur) {
 		this.contact_organisateur = contact_organisateur;
 	}
 
