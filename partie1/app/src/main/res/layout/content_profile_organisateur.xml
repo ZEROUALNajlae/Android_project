@@ -87,7 +87,26 @@
 
         </RelativeLayout>
 
+
         <View style="@style/proifleDetailsView" />
+
+
+        <Button
+            android:id="@+id/back3"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="34dp"
+            android:text="Add menu"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            tools:layout_editor_absoluteX="211dp"
+            tools:layout_editor_absoluteY="602dp" />
 
         <View style="@style/proifleDetailsView" />
 

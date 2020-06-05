@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,6 +20,8 @@ import com.google.android.material.snackbar.Snackbar;
 public class ProfilClient extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private TextView  btnsub;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -59,5 +63,12 @@ public class ProfilClient extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 //end of navigation
+        setContentView(R.layout.activity_profi_organisateur);
+        btnsub = (TextView) findViewById(R.id.back);
+        btnsub.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(ProfilClient.this, MainActivity.class);
+                startActivity(i);            }
+        });
     }
 }
