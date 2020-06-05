@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:gravity="center_horizontal"
+    android:background="@drawable/party"
+    tools:context=".RegisterOrg">
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="110dp"
+            app:srcCompat="@drawable/logo_planerify" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="username"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="213dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+           />
+
+
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:hint="contact"
+            android:inputType="textPersonName"
+             />
+
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:hint="description"
+            android:inputType="textPersonName"
+          />
+
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:hint="mot de passe"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/rePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/pink"
+            android:hint="confirmer le mot de passe"
+            android:inputType="textPersonName"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/getLocation"
+                    android:layout_width="89dp"
+                    android:layout_height="47dp"
+                    android:background="@color/silver"
+                    android:text='Address'
+                    />
+                <TextView
+                    android:id="@+id/Country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    />
+                <TextView
+                    android:id="@+id/adresse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:textColor="@color/colorAccent"
+                    android:inputType="textPersonName"
+                    />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="enregister"
+            android:background="@color/silver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.77"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.92" />
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+

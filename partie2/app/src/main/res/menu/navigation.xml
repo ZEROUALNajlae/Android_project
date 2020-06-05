@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/demande"
+        android:title="Demande"
+        android:icon="@drawable/ic_demande"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"/>
+    <item
+        android:id="@+id/Ajout_Menu"
+        android:title="Ajouter menu"
+        android:icon="@drawable/ic_add_"/>
+    <item
+        android:id="@+id/deconnection"
+        android:title="se déconnecter"
+        android:icon="@drawable/ic_deconnecter"/>
+
+</menu>

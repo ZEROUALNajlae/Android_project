@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "29943632574",
+    "firebase_url": "https://plannerify-2a56d.firebaseio.com",
+    "project_id": "plannerify-2a56d",
+    "storage_bucket": "plannerify-2a56d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29943632574:android:bb632bdcdb28a8ce31c4ef",
+        "android_client_info": {
+          "package_name": "com.example.plannerify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29943632574-2tm60c1p8l1koutb0l1cboo8fcq7fvls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plannerify",
+            "certificate_hash": "85a8085f9cf831be68ba2beaab8ad8302acdbce1"
+          }
+        },
+        {
+          "client_id": "29943632574-gujghs8aanomkr47lbv6q3icuf2ie0f3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtw8-nfEw5lGcY8bmPmiHwvdY_ULCqG7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29943632574-gujghs8aanomkr47lbv6q3icuf2ie0f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

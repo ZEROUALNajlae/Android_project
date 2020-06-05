@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Plannerify</string>
+    <string name="facebook_app_id">622765478448265</string>
+    <string name="fb_login_protocol_scheme">fb622765478448265</string>
+    <string name="email">email</string>
+
+
+</resources>
