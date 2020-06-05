@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myplannerify">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_plannerify_cirlce"
+        android:label="@string/Plannerify"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Birthday" />
+        <activity android:name=".profiOrganisateur" />
+        <activity android:name=".Engagement" />
+        <activity android:name=".AddMenu" />
+        <activity android:name=".ProfilClient" />
+        <activity android:name=".Explore" />
+        <activity android:name=".Graduation" />
+        <activity android:name=".ProfilOrg" />
+        <activity android:name=".ForgetPasswordC" />
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".organisateur" />
+        <activity android:name=".register" />
+        <activity
+            android:name=".AccueilClient"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuListActivity"
+            android:parentActivityName=".AddMenuActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AddMenuActivity" />
+        </activity>
+        <activity
+            android:name=".Welcome"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>
